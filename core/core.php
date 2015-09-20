@@ -20,11 +20,13 @@ include 'class.utiles.php';
 include 'class.diseno.php';
 include 'class.producto.php';
 include 'class.carro.php';
+include 'class.usuarios.php';
 
 #Instancia de las clases
 $diseno = new Diseno();
 $utiles = new Utiles();
 $producto = new Producto();
 $carro = new Carro();
+$usuario = new Usuario();
 
 ?>
