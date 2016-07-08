@@ -15,5 +15,12 @@ define("CorreoSac", "sac@bloquemarcial.cl");
 define("CorreoSacContrasena", "b#458cW@");
 define("CorreoSacNombre", "SAC Bloque Marcial");
 
+#Se definen las constantes de conexión
+define('hostConexion','localhost');
+define('userConexion','root');
+define('passConexion','');
+define('ddbbConexion','bloquemarcial');
+
+
 
 ?>

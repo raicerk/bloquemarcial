@@ -8,9 +8,18 @@
         <script type="text/javascript" src="http://raicerk.cl/home/js/jquery.js"></script>
     </head>
     <body>
+
+    	<?php 
+
+    		$dato = $mysqli->Query("CALL spRec_Ecommerce_DetalleProducto(?)",array('i',1),false);
+    		var_dump($dato);
+
+    	?>
+
         <input type="text" name="txtProducto" id="txtProducto">
         <input type="button" onclick="CargaProducto()" value="Cargar">
         <input type="button" onclick="ListaProducto()" value="Mostrar">
+        <div id="respuesta"></div>
         <script type="text/javascript">
 			function CargaProducto () {
 
@@ -46,7 +55,7 @@
 			            $('#button-send').html('Enviando...');
 			        },
 			        success:  function (response) {
-						alert(response);
+						$("#respuesta").html(response);
 			        }
 			    });
 			}

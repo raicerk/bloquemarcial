@@ -21,6 +21,7 @@ include 'class.diseno.php';
 include 'class.producto.php';
 include 'class.carro.php';
 include 'class.usuarios.php';
+include 'class.db.php';
 
 #Instancia de las clases
 $diseno = new Diseno();
@@ -28,5 +29,6 @@ $utiles = new Utiles();
 $producto = new Producto();
 $carro = new Carro();
 $usuario = new Usuario();
+$mysqli = new DBMySql();
 
 ?>
