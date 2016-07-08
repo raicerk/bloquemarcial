@@ -1,6 +1,6 @@
 <?php
 
-class Producto{
+class Producto extends DBMySql{
 	
 	public $string_NombreProducto;
 	public $int_CodigoProducto;
@@ -9,10 +9,14 @@ class Producto{
 	public $array_Productos = array();
 
 	function __construct($CodigoProducto=""){
-		$this->int_CodigoProducto = $CodigoProducto;
-		$this->string_NombreProducto = "Producto number one";
-		$this->int_ValorProducto = 10000;
-		$this->string_MarcaProducto = "MTX Mooto";
+		$mysqli = new DBMySql();
+		$dato = $mysqli->Query("CALL spRec_Ecommerce_DetalleProducto(?)",array('i',$CodigoProducto),false);
+		foreach ($dato as $key) {
+			$this->int_CodigoProducto = $CodigoProducto;
+			$this->string_NombreProducto = $key["NombreProducto"];
+			$this->int_ValorProducto = $key["Precio"];
+			$this->string_MarcaProducto = $key["Marca"];
+		}	
 	}
 
 	public function GetNombreProducto(){

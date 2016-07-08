@@ -16,12 +16,13 @@ if (constant("MostrarErrores")) {
 }
 
 #Carga de clases
+include 'class.db.php';
 include 'class.utiles.php';
 include 'class.diseno.php';
 include 'class.producto.php';
 include 'class.carro.php';
 include 'class.usuarios.php';
-include 'class.db.php';
+
 
 #Instancia de las clases
 $diseno = new Diseno();

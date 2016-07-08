@@ -21,6 +21,4 @@ define('userConexion','root');
 define('passConexion','');
 define('ddbbConexion','bloquemarcial');
 
-
-
 ?>
